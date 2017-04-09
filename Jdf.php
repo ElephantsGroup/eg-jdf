@@ -23,12 +23,12 @@ class Jdf
      *
      * @return string
      */
-    public static function jdate($format,$timestamp='',$none='',$time_zone='Asia/Tehran',$tr_num='fa')
+    public static function jdate($format,$timestamp='',$none='',$time_zone='Iran',$tr_num='fa')
     {
 
         $T_sec=0;/* <= رفع خطاي زمان سرور ، با اعداد '+' و '-' بر حسب ثانيه */
 
-        if($time_zone!='local')date_default_timezone_set(($time_zone==='')?'Asia/Tehran':$time_zone);
+        if($time_zone!='local')date_default_timezone_set(($time_zone==='')?'Iran':$time_zone);
         $ts=$T_sec+(($timestamp==='')?time(): self::tr_num($timestamp));
         $date=explode('_',date('H_i_j_n_O_P_s_w_Y',$ts));
         list($j_y,$j_m,$j_d)= self::gregorian_to_jalali($date[8],$date[3],$date[2]);
@@ -238,12 +238,12 @@ class Jdf
      *
      * @return string
      */
-    public static function jstrftime($format,$timestamp='',$none='',$time_zone='Asia/Tehran',$tr_num='fa')
+    public static function jstrftime($format,$timestamp='',$none='',$time_zone='Iran',$tr_num='fa')
     {
 
         $T_sec=0;/* <= رفع خطاي زمان سرور ، با اعداد '+' و '-' بر حسب ثانيه */
 
-        if($time_zone!='local')date_default_timezone_set(($time_zone==='')?'Asia/Tehran':$time_zone);
+        if($time_zone!='local')date_default_timezone_set(($time_zone==='')?'Iran':$time_zone);
         $ts=$T_sec+(($timestamp==='')?time(): self::tr_num($timestamp));
         $date=explode('_',date('h_H_i_j_n_s_w_Y',$ts));
         list($j_y,$j_m,$j_d)= self::gregorian_to_jalali($date[7],$date[4],$date[3]);
@@ -467,7 +467,7 @@ class Jdf
      *
      * @return false|int
      */
-    public static function jmktime($h='',$m='',$s='',$jm='',$jd='',$jy='',$none='',$timezone='Asia/Tehran')
+    public static function jmktime($h='',$m='',$s='',$jm='',$jd='',$jy='',$none='',$timezone='Iran')
     {
         if($timezone!='local')date_default_timezone_set($timezone);
         if($h===''){
@@ -510,7 +510,7 @@ class Jdf
      *
      * @return array
      */
-    public static function jgetdate($timestamp='',$none='',$timezone='Asia/Tehran',$tn='en')
+    public static function jgetdate($timestamp='',$none='',$timezone='Iran',$tn='en')
     {
         $ts=($timestamp==='')?time(): self::tr_num($timestamp);
         $jdate=explode('_', self::jdate('F_G_i_j_l_n_s_w_Y_z',$ts,'',$timezone,$tn));
