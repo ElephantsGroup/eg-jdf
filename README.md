@@ -1,6 +1,6 @@
 jdf
 ===
-jdf library for yii2
+Yii2 Jalali date library based on jdf library for yii2 by Hooman.Mirghasemi
 
 Installation
 ------------
@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist hooman.mirghasemi/yii2-jdf "*"
+php composer.phar require --prefer-dist elephantsgroup/eg-jdf "*"
 ```
 
 or add
 
 ```
-"hooman.mirghasemi/yii2-jdf": "*"
+"elephantsgroup/eg-jdf": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -29,7 +29,7 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
 <?php 
-use hoomanMirghasemi\jdf\Jdf;
+use elephantsGroup\jdf\Jdf;
 ?>
 <?= Jdf::jdate(); ?>```
 

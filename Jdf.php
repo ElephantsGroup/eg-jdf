@@ -1,14 +1,14 @@
 <?php
 
-namespace hoomanMirghasemi\jdf;
+namespace elephantsGroup\jdf;
 
 /**
  *
- * @name : yii2-jdf
- * @Version 1.0.2
- * @Author : Hooman Mirghasemi
+ * @name : eg-jdf
+ * @Version 1.0.0
+ * @Author : Jalal Jaberi
  *
- *
+ * based on Hooman Mirghasemi jdf
  * it use : WebSite : http://jdf.scr.ir
  */
 
