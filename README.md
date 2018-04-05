@@ -31,7 +31,7 @@ Once the extension is installed, simply use it in your code by  :
 <?php 
 use elephantsGroup\jdf\Jdf;
 ?>
-<?= Jdf::jdate(); ?>```
+<?= Jdf::jdate('H:i:s'); ?>```
 
 
 This extension built with http://jdf.scr.ir/ you can get full document there.
